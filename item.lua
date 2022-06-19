@@ -2,15 +2,25 @@
 
 -- data.raw["recipes"]["fusion-reactor-equipment"].ingredients = {}
 -- data.raw["recipes"]["fusion-reactor-equipment"].enabled = true
-local recipe =   {
-  type = "recipe",
-  name = "fusion-reactor-equipment",
-  enabled = true,
-  energy_required = 0.01,
-  ingredients = {},
-  result = "fusion-reactor-equipment"
+local free_items = {
+  "belt-immunity-equipment",
+  "construction-robot",
+  "exoskeleton-equipment",
+  "night-vision-equipment",
+  "fusion-reactor-equipment",
+  "personal-roboport-mk2-equipment",
 }
-data:extend{recipe}
+for _, name in ipairs(free_items) do
+  local recipe =   {
+    type = "recipe",
+    name = name,
+    enabled = true,
+    energy_required = 0.01,
+    ingredients = {},
+    result = name,
+  }
+  data:extend{recipe}
+end
 
 local hackArmor = table.deepcopy(data.raw["armor"]["power-armor-mk2"])
 
@@ -24,7 +34,7 @@ hackArmor.icons = {
 hackArmor.equipment_grid = "hack-equipment-grid"
 hackArmor.inventory_size_bonus = 50
 
-local recipe = {
+local hackRecipe = {
   type = "recipe",
   name = "hack-armor",
   enabled = true,
@@ -34,7 +44,7 @@ local recipe = {
   requester_paste_multiplier = 1
 }
 
-local grid = {
+local hackGrid = {
   type = "equipment-grid",
   name = "hack-equipment-grid",
   width = 16,
@@ -42,4 +52,4 @@ local grid = {
   equipment_categories = {"armor"}
 }
 
-data:extend{hackArmor,recipe,grid}
+data:extend { hackArmor, hackRecipe, hackGrid }
