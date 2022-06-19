@@ -22,34 +22,34 @@ for _, name in ipairs(free_items) do
   data:extend{recipe}
 end
 
-local hackArmor = table.deepcopy(data.raw["armor"]["power-armor-mk2"])
+local qolArmor = table.deepcopy(data.raw["armor"]["power-armor-mk2"])
 
-hackArmor.name = "hack-armor"
-hackArmor.icons = {
+qolArmor.name = "qol-armor"
+qolArmor.icons = {
   {
-    icon = hackArmor.icon,
+    icon = qolArmor.icon,
     tint = {r=0.5,g=0.5,b=1,a=1}
   },
 }
-hackArmor.equipment_grid = "hack-equipment-grid"
-hackArmor.inventory_size_bonus = 50
+qolArmor.equipment_grid = "qol-equipment-grid"
+qolArmor.inventory_size_bonus = 50
 
-local hackRecipe = {
+local qolRecipe = {
   type = "recipe",
-  name = "hack-armor",
+  name = "qol-armor",
   enabled = true,
   energy_required = 0.01,
   ingredients = {},
-  result = "hack-armor",
+  result = "qol-armor",
   requester_paste_multiplier = 1
 }
 
-local hackGrid = {
+local qolGrid = {
   type = "equipment-grid",
-  name = "hack-equipment-grid",
+  name = "qol-equipment-grid",
   width = 16,
   height = 16,
   equipment_categories = {"armor"}
 }
 
-data:extend { hackArmor, hackRecipe, hackGrid }
+data:extend { qolArmor, qolRecipe, qolGrid }

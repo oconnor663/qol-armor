@@ -1,7 +1,7 @@
 {
-  "name": "hack-armor",
+  "name": "qol-armor",
   "version": "0.1.0",
-  "title": "Hack Armor",
+  "title": "QOL Armor",
   "author": "You",
   "factorio_version": "1.1",
   "dependencies": ["base >= 1.1"],
