@@ -1,5 +1,17 @@
 --item.lua
 
+-- data.raw["recipes"]["fusion-reactor-equipment"].ingredients = {}
+-- data.raw["recipes"]["fusion-reactor-equipment"].enabled = true
+local recipe =   {
+  type = "recipe",
+  name = "fusion-reactor-equipment",
+  enabled = true,
+  energy_required = 0.01,
+  ingredients = {},
+  result = "fusion-reactor-equipment"
+}
+data:extend{recipe}
+
 local hackArmor = table.deepcopy(data.raw["armor"]["power-armor-mk2"])
 
 hackArmor.name = "hack-armor"
@@ -16,7 +28,7 @@ local recipe = {
   type = "recipe",
   name = "hack-armor",
   enabled = true,
-  energy_required = 1,
+  energy_required = 0.01,
   ingredients = {},
   result = "hack-armor",
   requester_paste_multiplier = 1
