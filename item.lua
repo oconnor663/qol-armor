@@ -3,6 +3,7 @@
 -- data.raw["recipes"]["fusion-reactor-equipment"].ingredients = {}
 -- data.raw["recipes"]["fusion-reactor-equipment"].enabled = true
 local free_items = {
+  "battery-mk2-equipment",
   "belt-immunity-equipment",
   "cliff-explosives",
   "construction-robot",
