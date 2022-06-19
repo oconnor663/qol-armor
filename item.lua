@@ -1,42 +1,33 @@
 --item.lua
 
-local fireArmor = table.deepcopy(data.raw["armor"]["heavy-armor"]) -- copy the table that defines the heavy armor item into the fireArmor variable
+local hackArmor = table.deepcopy(data.raw["armor"]["power-armor-mk2"])
 
-fireArmor.name = "fire-armor"
-fireArmor.icons = {
+hackArmor.name = "hack-armor"
+hackArmor.icons = {
   {
-    icon = fireArmor.icon,
-    tint = {r=1,g=0,b=0,a=0.3}
+    icon = hackArmor.icon,
+    tint = {r=0,g=0,b=1,a=0.3}
   },
 }
+hackArmor.equipment_grid = "hack-equipment-grid"
+hackArmor.inventory_size_bonus = 50
 
-fireArmor.resistances = {
-  {
-    type = "physical",
-    decrease = 6,
-    percent = 10
-  },
-  {
-    type = "explosion",
-    decrease = 10,
-    percent = 30
-  },
-  {
-    type = "acid",
-    decrease = 5,
-    percent = 30
-  },
-  {
-    type = "fire",
-    decrease = 0,
-    percent = 100
-  }
+local recipe = {
+  type = "recipe",
+  name = "hack-armor",
+  enabled = true,
+  energy_required = 1,
+  ingredients = {},
+  result = "hack-armor",
+  requester_paste_multiplier = 1
 }
 
-local recipe = table.deepcopy(data.raw["recipe"]["heavy-armor"])
-recipe.enabled = true
-recipe.name = "fire-armor"
-recipe.ingredients = {{"copper-plate",200},{"steel-plate",50}}
-recipe.result = "fire-armor"
+local grid = {
+  type = "equipment-grid",
+  name = "hack-equipment-grid",
+  width = 20,
+  height = 20,
+  equipment_categories = {"armor"}
+}
 
-data:extend{fireArmor,recipe}
+data:extend{hackArmor,recipe,grid}
