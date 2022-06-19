@@ -48,7 +48,7 @@ local qolRecipe = {
 local qolGrid = {
   type = "equipment-grid",
   name = "qol-equipment-grid",
-  width = 16,
+  width = 20,
   height = 16,
   equipment_categories = {"armor"}
 }
