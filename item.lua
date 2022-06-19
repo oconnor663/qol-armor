@@ -6,7 +6,7 @@ hackArmor.name = "hack-armor"
 hackArmor.icons = {
   {
     icon = hackArmor.icon,
-    tint = {r=0,g=0,b=1,a=0.3}
+    tint = {r=0.5,g=0.5,b=1,a=1}
   },
 }
 hackArmor.equipment_grid = "hack-equipment-grid"
@@ -25,8 +25,8 @@ local recipe = {
 local grid = {
   type = "equipment-grid",
   name = "hack-equipment-grid",
-  width = 20,
-  height = 20,
+  width = 16,
+  height = 16,
   equipment_categories = {"armor"}
 }
 
