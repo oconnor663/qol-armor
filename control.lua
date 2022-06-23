@@ -2,17 +2,18 @@
 
 script.on_event(defines.events.on_player_created, function(e)
   local free_tech = {
-    "battery-equipment",
-    "battery-mk2-equipment",
     "belt-immunity-equipment",
     "cliff-explosives",
     "exoskeleton-equipment",
+    "heavy-armor",
+    "modular-armor",
     "night-vision-equipment",
+    "power-armor",
+    "power-armor-mk2",
     "fusion-reactor-equipment",
     "personal-roboport-equipment",
     "personal-roboport-mk2-equipment",
   }
-
 
   for _, name in ipairs(free_tech) do
     game.players[e.player_index].force.technologies[name].researched = true
