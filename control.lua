@@ -2,12 +2,14 @@
 
 script.on_event(defines.events.on_player_created, function(e)
   local free_tech = {
+    "battery-equipment",
     "battery-mk2-equipment",
     "belt-immunity-equipment",
     "cliff-explosives",
     "exoskeleton-equipment",
     "night-vision-equipment",
     "fusion-reactor-equipment",
+    "personal-roboport-equipment",
     "personal-roboport-mk2-equipment",
   }
 

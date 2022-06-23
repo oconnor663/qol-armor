@@ -3,6 +3,7 @@
 -- data.raw["recipes"]["fusion-reactor-equipment"].ingredients = {}
 -- data.raw["recipes"]["fusion-reactor-equipment"].enabled = true
 local free_items = {
+  "battery-equipment",
   "battery-mk2-equipment",
   "belt-immunity-equipment",
   "cliff-explosives",
@@ -10,6 +11,7 @@ local free_items = {
   "exoskeleton-equipment",
   "night-vision-equipment",
   "fusion-reactor-equipment",
+  "personal-roboport-equipment",
   "personal-roboport-mk2-equipment",
 }
 for _, name in ipairs(free_items) do
