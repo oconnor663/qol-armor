@@ -5,7 +5,6 @@ script.on_event(defines.events.on_player_created, function(e)
     "battery-mk2-equipment",
     "belt-immunity-equipment",
     "cliff-explosives",
-    "construction-robotics",
     "exoskeleton-equipment",
     "night-vision-equipment",
     "fusion-reactor-equipment",
