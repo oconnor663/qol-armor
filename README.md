@@ -1,6 +1,5 @@
 A fast start Factorio mod
 
-- add a new, free armor type with tons of equipment space
 - make all of the following free and available from the start:
   - construction bots
   - personal roboports
@@ -9,3 +8,4 @@ A fast start Factorio mod
   - night vision goggles
   - belt immunity equipment
   - cliff explosives
+- resize all the above equipment to 1x1 in the equipment grid
