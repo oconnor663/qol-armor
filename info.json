@@ -5,5 +5,5 @@
   "author": "You",
   "factorio_version": "1.1",
   "dependencies": ["base >= 1.1"],
-  "description": "This mod makes buffed power armor and construction bots free and avaiable from the start."
+  "description": "This mod makes power armor and construction bots free and avaiable from the start, and makes equipment smaller"
 }
